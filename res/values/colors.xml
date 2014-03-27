@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_color">#F2F2F2</color>
+    <color name="list_book_name">#0E3B4A</color>
+    <color name="list_book_desc">#51ADA6</color>
+    <color name="window_bg">#ffeef1f3</color>
+    <color name="qqblue">#ff54acea</color>
+    <color name="transparent">#00000000</color>
+</resources>

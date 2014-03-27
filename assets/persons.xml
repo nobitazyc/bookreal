@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+    <person id="1">
+        <name>admin</name>
+        <password>admin</password>
+        <bookneed>1,2,3,4,5,6,7,8,9</bookneed>
+    </person>
+    <person id="2">
+        <name>android</name>
+        <password>123456</password>
+        <bookneed>1,2,5,6</bookneed>
+    </person>
+    <person id="3">
+        <name>6377667</name>
+        <password>123456</password>
+        <bookneed>4,5,6,7,8</bookneed>
+    </person>
+    <person id="4">
+        <name>sun</name>
+        <password>123456</password>
+        <bookneed>4,8,6,9</bookneed>
+    </person>
+</persons>

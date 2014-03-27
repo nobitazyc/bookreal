@@ -1,0 +1,370 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+     <com.example.FlyOutContainer.FlyOutContainer
+                        android:id="@+id/FlyOutRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.93"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/resultContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#0E3B4A"
+                            android:orientation="vertical"
+                            android:visibility="visible" >
+
+                            <ListView
+                                android:id="@+id/BookInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+                            </ListView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/searchbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2.93"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical" >
+
+                            <RelativeLayout
+                                android:layout_width="300dp"
+                                android:layout_height="fill_parent" >
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:id="@+id/fakeArea"
+                                        android:layout_width="300dp"
+                                        android:layout_height="100dp" />
+
+                                    <LinearLayout
+                                        android:id="@+id/searchGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="gone" >
+
+                                        <SearchView
+                                            android:id="@+id/searchIndex"
+                                            android:layout_width="300dp"
+                                            android:layout_height="wrap_content" >
+                                        </SearchView>
+
+                                        <Button
+                                            android:id="@+id/searchButton"
+                                            android:layout_width="300dp"
+                                            android:layout_height="wrap_content"
+                                            android:onClick="search"
+                                            android:text="Search" />
+                                    </LinearLayout>
+                                    
+                                    <LinearLayout
+                                        android:id="@+id/mapGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical" >
+
+                                       
+                                        <TextView
+                                            android:id="@+id/maptext"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:textAppearance="?android:attr/textAppearanceLarge"
+                                            android:textColor="#DD3B95"
+                                            android:textSize="30sp" />
+                                    </LinearLayout>
+                                    
+
+                                    <LinearLayout
+                                        android:id="@+id/titleGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:rotation="20"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/titleTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Title"
+                                            android:textAppearance="?android:attr/textAppearanceLarge"
+                                            android:textColor="#DD3B95"
+                                            android:textSize="30sp" />
+
+                                        <TextView
+                                            android:id="@+id/titleContent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="hereIsTheTitle"
+                                            android:textAppearance="?android:attr/textAppearanceSmall"
+                                            android:textColor="#DD3B95"
+                                            android:textSize="20sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/authorGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="80dp"
+                                        android:orientation="vertical"
+                                        android:rotation="-20"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/authorTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="author"
+                                            android:textSize="30sp"
+                                            android:textAppearance="?android:attr/textAppearanceLarge"
+                                            android:textColor="#525913" />
+
+                                        <TextView
+                                            android:id="@+id/authorContent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Small Text"
+                                            android:textSize="20sp"
+                                            android:textColor="#525913"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/publisherGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="-50dp"
+                                        android:orientation="vertical"
+                                        android:rotation="-20"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/publisherTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="publisher"
+                                            android:textSize="30sp"
+                                            android:textColor="#20AAD5"
+                                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                        <TextView
+                                            android:id="@+id/publisherContent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Small Text"
+                                            android:textSize="20sp"
+                                            android:textColor="#20AAD5"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/publishDateGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginTop="200dp"                          
+                                        android:rotation="20"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/publishDateTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="publishdate"
+                                            android:textSize="30sp"
+                                            android:textColor="#DD3B95"
+                                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                        <TextView
+                                            android:id="@+id/publishDateContent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Small Text"
+                                            android:textSize="20sp"
+                                            android:textColor="#DD3B95"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/languageGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                         android:layout_marginTop="230dp"                          
+                                        android:rotation="-20"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/languageTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="language"
+                                            android:textSize="30sp"
+                                            android:textColor="#525913"
+                                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                        <TextView
+                                            android:id="@+id/languageContent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Small Text"
+                                             android:textSize="20sp"
+                                            android:textColor="#525913"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/introductionGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:layout_marginTop="-60dp"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/introductionTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="introduction"
+                                            android:textSize="30sp"
+                                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                        <TextView
+                                            android:id="@+id/introductionContent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Small Text"
+                                            android:textSize="15sp"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/logoutGroup"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="gone" >
+
+                                        <TextView
+                                            android:id="@+id/logoutTitle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="logout"
+                                            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+                                        <TextView
+                                            android:id="@+id/logoutContent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Small Text"
+                                            android:textAppearance="?android:attr/textAppearanceSmall" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/fakeArea2"
+                                        android:layout_width="300dp"
+                                        android:layout_height="409dp" />
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/logoutbg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/logoutbg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/titlebg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/titlebg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/authorbg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/authorbg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/publishdatebg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/publishdatebg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/publisherbg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/publisherbg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/languagebg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/languagebg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/introductionbg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/introductionbg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/searchbg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:src="@drawable/searchbg"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/mapbg"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                     />
+
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+                    </com.example.FlyOutContainer.FlyOutContainer>
+    
+
+</RelativeLayout>

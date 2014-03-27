@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <com.example.FlyOutContainer.FlyOutContainer
+                        android:id="@+id/FlyOutRoot"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.93"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:id="@+id/resultContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#993366"
+                            android:orientation="vertical" >
+
+                            <ListView
+                                android:id="@+id/BookInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+                            </ListView>
+
+                            <Button
+                                android:id="@+id/favourite"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="toggleMenu"
+                                android:text="add to favourite" />
+                            <Button
+                                android:id="@+id/button1"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:onClick="toggleMenu"
+                                android:text="return" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/searchbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:layout_weight="2.93"
+                            android:orientation="vertical" >
+
+                            <SearchView
+                                android:id="@+id/searchIndex"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="100dp" >
+
+                            </SearchView>
+
+                            <Button
+                                android:id="@+id/searchButton"
+                                android:layout_width="300dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:onClick="search"
+                                android:text="Search" />
+
+                        </LinearLayout>
+
+                    </com.example.FlyOutContainer.FlyOutContainer>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/scan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+                    
+                      <TextView
+                        android:id="@+id/infoDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TextView" />
+
+                    <EditText
+                        android:id="@+id/searchBook2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10" >
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <ListView
+                        android:id="@+id/HistoryList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+                    </ListView>
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>

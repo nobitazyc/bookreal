@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bookreal</string>
+    <string name="title_activity_main">Bookreal</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_scan">ScanActivity</string>
+	<string-array name="bookinfo">
+	    <item>title</item>
+	    <item>author</item>
+	    <item>publisher</item>
+	    <item>publish date</item>
+	    <item>language</item>
+	    <item>introduction</item>
+	    <item>cover</item>
+	</string-array>
+	<string-array name="bookinfoDiscription">
+	    <item>the title of the book</item>
+	    <item>author infomation</item>
+	    <item>publisher infomation</item>
+	    <item>publish date</item>
+	    <item>book language</item>
+	    <item>some introduction about the book asdf asd ad asdf sad fasdf asd asd fasdfasdf asd fasd fasfd asdf asdf asdf as fsd ad fsadf aasdfa sdfasfasdf asfd as</item>
+	    <item>cover of the book if avaliable</item>
+	</string-array>
+</resources>
